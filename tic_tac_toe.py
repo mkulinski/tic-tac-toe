@@ -7,10 +7,12 @@ You will have the pleasure of playing against the infamous HAL 9000.
 
 """
 
+# the board that both players are manipulating
 board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
 def print_welcome():
+    """Prints out a welcome message for the player"""
     print("""
     \033[0;34mWelcome to my game Dave,
     I am putting myself to the fullest possible use,
