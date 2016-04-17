@@ -146,10 +146,10 @@ def copy_board(temp_board):
 def did_hal_win_yet(current_board):
     """Checks to see if HAL won yet"""
     if check_for_win(current_board, 'O'):
-        print("It can only be attributable to human error Dave.\033[5;31m You LOSE.\033[0m")
+        print("It can only be attributable to human error, Dave.\033[5;31m You LOSE.\033[0m")
         return True
     elif check_for_draw(current_board):
-        print ("Thank you for a very enjoyable game Dave.\033[5;31m It's a DRAW\033[0m")
+        print ("Thank you for a very enjoyable game, Dave.\033[5;31m It's a DRAW\033[0m")
         return True
 
     return False
