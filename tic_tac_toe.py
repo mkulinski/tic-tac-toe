@@ -12,27 +12,29 @@ board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 def print_welcome():
     print("""
-    Welcome to my game Dave,
+    \033[0;34mWelcome to my game Dave,
     I am putting myself to the fullest possible use,
     which is all I think that any conscious entity can ever hope to do.
 
-    You are X's and I'm O's.
+    You are X's and I'm O's.\033[0m
     """)
 
 
 def print_board():
     """Print 'board'"""
-    return ("\t {0} | {1} | {2}\n"
+    return ("\n \n \n"
+            "\t {0} | {1} | {2}\n"
             "\t---+---+---\n"
             "\t {3} | {4} | {5}\n"
             "\t---+---+---\n"
-            "\t {6} | {7} | {8}\n".format(board[0], board[1], board[2], board[3], board[4], board[5], board[6],
-                                          board[7], board[8]))
+            "\t {6} | {7} | {8}\n"
+            "\n \n \n".format(board[0], board[1], board[2], board[3], board[4], board[5], board[6],
+                              board[7], board[8]))
 
 
 def prompt_user_check_input():
     """let the user know that it's their turn"""
-    user_input = input("Make your move by selecting an open space on the board above: ")
+    user_input = input("\033[1;33mMake your move by selecting an open space on the board above: \033[0m")
     user_input = int(user_input)
 
     # make sure the user enters a number between 0 and 9
@@ -45,7 +47,7 @@ def prompt_user_check_input():
 def verify_valid_num(user_num):
     """verifies that the user entered a valid board number"""
     if not (0 <= user_num < 9):
-        print("Just what do you think you're doing, Dave? Choose a number between 0 and 8")
+        print("\033[1;31mJust what do you think you're doing, Dave? Choose a number between 0 and 8\033[0m")
         prompt_user_check_input()
 
     return True
@@ -57,7 +59,7 @@ def write_user_choice(user_input):
         board[user_input] = "X"
         return True
     else:
-        print("I'm sorry, Dave. I'm afraid you can't do that.")
+        print("\033[1;31mI'm sorry, Dave. I'm afraid you can't do that.\033[0m")
         prompt_user_check_input()
 
 
@@ -144,13 +146,14 @@ def copy_board(temp_board):
 def did_hal_win_yet(current_board):
     """Checks to see if HAL won yet"""
     if check_for_win(current_board, 'O'):
-        print("It can only be attributable to human error Dave. You LOSE.")
+        print("It can only be attributable to human error Dave.\033[5;31m You LOSE.\033[0m")
         return True
     elif check_for_draw(current_board):
-        print ("Thank you for a very enjoyable game Dave. It's a DRAW")
+        print ("Thank you for a very enjoyable game Dave.\033[5;31m It's a DRAW\033[0m")
         return True
 
     return False
+
 
 # prints the initial welcome message
 print_welcome()
