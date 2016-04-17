@@ -4,11 +4,13 @@ import tic_tac_toe
 
 class TestBoard(unittest.TestCase):
     def test_if_board_displays(self):
-        self.assertEqual(tic_tac_toe.print_board(), "\t 0 | 1 | 2\n"
+        self.assertEqual(tic_tac_toe.print_board(), "\n \n \n"
+                                                    "\t 0 | 1 | 2\n"
                                                     "\t---+---+---\n"
                                                     "\t 3 | 4 | 5\n"
                                                     "\t---+---+---\n"
-                                                    "\t 6 | 7 | 8\n")
+                                                    "\t 6 | 7 | 8\n"
+                                                    "\n \n \n")
 
 
 class TestVerifyValidNum(unittest.TestCase):

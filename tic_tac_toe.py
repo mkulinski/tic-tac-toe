@@ -155,27 +155,27 @@ def did_hal_win_yet(current_board):
     return False
 
 
-# prints the initial welcome message
-print_welcome()
-
-# loop to continue the game until HAL wins or there is a draw. The user cannot win.
-while True:
-
-    # prints the board at its current state
-    print(print_board())
-
-    # prompts the user and checks to make sure their input is valid
-    prompt_user_check_input()
-
-    # checks to see if HAL won yet, or if there is a draw
-    if did_hal_win_yet(board):
-        print(print_board())
-        break
-
-    # writes HAL's move to board
-    move_hal(board, hal_9000(board))
-
-    # checks to see if HAL won yet, or if there is a draw
-    if did_hal_win_yet(board):
-        print(print_board())
-        break
+# # prints the initial welcome message
+# print_welcome()
+#
+# # loop to continue the game until HAL wins or there is a draw. The user cannot win.
+# while True:
+#
+#     # prints the board at its current state
+#     print(print_board())
+#
+#     # prompts the user and checks to make sure their input is valid
+#     prompt_user_check_input()
+#
+#     # checks to see if HAL won yet, or if there is a draw
+#     if did_hal_win_yet(board):
+#         print(print_board())
+#         break
+#
+#     # writes HAL's move to board
+#     move_hal(board, hal_9000(board))
+#
+#     # checks to see if HAL won yet, or if there is a draw
+#     if did_hal_win_yet(board):
+#         print(print_board())
+#         break
