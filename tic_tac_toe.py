@@ -183,4 +183,5 @@ def run_program():
 print_welcome()
 
 # runs the game
-run_program()
+if __name__ == "__main__":
+    run_program()
