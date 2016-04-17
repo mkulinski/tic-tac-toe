@@ -98,8 +98,14 @@ def hal_9000(hal_board):
 
 
 def move_hal(current_board, move):
-    """Takes HAL's move and writes it to the board"""
-    current_board[move] = "O"
+    """Takes HAL's move and writes it to the board if there is an open space"""
+    # checks for an open space on the board
+    if check_for_draw(current_board):
+        return False
+    # if there is an open space, hal writes his move there
+    else:
+        current_board[move] = "O"
+        return True
 
 
 def check_if_empty(current_board, user_input):
@@ -155,27 +161,26 @@ def did_hal_win_yet(current_board):
     return False
 
 
+def run_program():
+    """Loop to continue the game until HAL wins or there is a draw. The user cannot win."""
+    while True:
+
+        # prints the board at its current state
+        print(print_board())
+
+        # prompts the user and checks to make sure their input is valid
+        prompt_user_check_input()
+
+        # writes HAL's move to board
+        move_hal(board, hal_9000(board))
+
+        # checks to see if HAL won yet, or if there is a draw
+        if did_hal_win_yet(board):
+            print(print_board())
+            break
+
 # prints the initial welcome message
 print_welcome()
 
-# loop to continue the game until HAL wins or there is a draw. The user cannot win.
-while True:
-
-    # prints the board at its current state
-    print(print_board())
-
-    # prompts the user and checks to make sure their input is valid
-    prompt_user_check_input()
-
-    # checks to see if HAL won yet, or if there is a draw
-    if did_hal_win_yet(board):
-        print(print_board())
-        break
-
-    # writes HAL's move to board
-    move_hal(board, hal_9000(board))
-
-    # checks to see if HAL won yet, or if there is a draw
-    if did_hal_win_yet(board):
-        print(print_board())
-        break
+# runs the game
+run_program()

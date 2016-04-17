@@ -27,8 +27,8 @@
           <file leaf-file-name="tic_tac_toe.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tic_tac_toe.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="164" column="24" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+                <state relative-caret-position="658">
+                  <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -41,10 +41,10 @@
           <file leaf-file-name="test_ttt.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test_ttt.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="81" selection-start-line="3" selection-start-column="81" selection-end-line="3" selection-end-column="81" />
                   <folding>
-                    <element signature="e#0#15#0" expanded="true" />
+                    <element signature="e#137#152#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -57,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_ttt.py" />
         <option value="$PROJECT_DIR$/tic_tac_toe.py" />
+        <option value="$PROJECT_DIR$/test_ttt.py" />
       </list>
     </option>
   </component>
@@ -360,18 +360,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test_ttt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="45">
+          <caret line="3" column="81" selection-start-line="3" selection-start-column="81" selection-end-line="3" selection-end-column="81" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#137#152#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tic_tac_toe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="164" column="24" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+        <state relative-caret-position="658">
+          <caret line="185" column="13" selection-start-line="185" selection-start-column="13" selection-end-line="185" selection-end-column="13" />
           <folding />
         </state>
       </provider>

@@ -1,3 +1,12 @@
+"""
+This is the test file for tic_tac_toe.py.
+
+PLEASE COMMENT OUT THE LAST LINE IN tic_tac_toe.py BEFORE RUNNING (run_program())
+
+
+"""
+
+
 import unittest
 import tic_tac_toe
 
