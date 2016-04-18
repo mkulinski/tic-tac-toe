@@ -18,7 +18,7 @@ def print_welcome():
     I am putting myself to the fullest possible use,
     which is all I think that any conscious entity can ever hope to do.
 
-    You are X's and I'm O's.\033[0m
+    You are X's and I am O's.\033[0m
     """)
 
 
@@ -36,33 +36,35 @@ def print_board():
 
 def prompt_user_check_input():
     """let the user know that it's their turn"""
-    user_input = input("\033[1;33mMake your move by selecting an open space on the board above: \033[0m")
+
+    # grabs user input and changes it to an int
+    user_input = input("\033[1;33mMake your move by entering the number of an open space on the board: \033[0m")
     user_input = int(user_input)
 
-    # make sure the user enters a number between 0 and 9
-    verify_valid_num(user_input)
-
-    # verifies that the space the user selected is open
-    write_user_choice(user_input)
+    # make sure the user enters a number 0-8 and verifies that the space the user selected is open
+    if verify_valid_num(user_input) and write_user_choice(user_input):
+        return True
+    else:
+        prompt_user_check_input()
 
 
 def verify_valid_num(user_num):
     """verifies that the user entered a valid board number"""
     if not (0 <= user_num < 9):
         print("\033[1;31mJust what do you think you're doing, Dave? Choose a number between 0 and 8\033[0m")
-        prompt_user_check_input()
+        return False
 
     return True
 
 
 def write_user_choice(user_input):
-    """verifies that the number the user entered is not already occupied by a player"""
+    """Writes the user's input to the board as long as it's an open space"""
     if check_if_empty(board, user_input):
         board[user_input] = "X"
         return True
     else:
         print("\033[1;31mI'm sorry, Dave. I'm afraid you can't do that.\033[0m")
-        prompt_user_check_input()
+        return False
 
 
 def hal_9000(hal_board):
@@ -152,7 +154,7 @@ def copy_board(temp_board):
 
 
 def did_hal_win_yet(current_board):
-    """Checks to see if HAL won yet"""
+    """Checks to see if HAL won yet or if there is a draw"""
     if check_for_win(current_board, 'O'):
         print("It can only be attributable to human error, Dave.\033[5;31m You LOSE.\033[0m")
         return True
