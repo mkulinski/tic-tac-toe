@@ -36,12 +36,19 @@ def print_board():
 
 def prompt_user_check_input():
     """let the user know that it's their turn"""
-
+    user_input = 0
     # grabs user input and changes it to an int
-    user_input = input("\033[1;33mMake your move by entering the number of an open space on the board: \033[0m")
-    user_input = int(user_input)
+    while True:
+        try:
+            user_input = int(
+                input("\033[1;33mMake your move by entering the number of an open space on the board: \033[0m"))
+        except ValueError:
+            print("Why do you refuse to enter a number, Dave?")
+            continue
+        else:
+            break
 
-    # make sure the user enters a number 0-8 and verifies that the space the user selected is open
+    # makes sure the user enters a number 0-8 and verifies that the space the user selected is open
     if verify_valid_num(user_input) and write_user_choice(user_input):
         return True
     else:
@@ -182,6 +189,7 @@ def run_program():
         if did_hal_win_yet(board):
             print(print_board())
             break
+
 
 # prints the initial welcome message
 print_welcome()
