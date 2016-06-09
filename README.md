@@ -8,7 +8,7 @@ Getting Started
 
 To play tic-tac-toe against HAL 9000 you must have Python 3 installed on your computer. (https://www.python.org/downloads/)
 
-> - The first step is the download the tic-tac-toe repo.
+> - The first step is to download the tic-tac-toe repo.
 
 > - Once you have the tic-tac-toe repo downloaded, open up your terminal application, browse to where your tic_tac_toe.py file is located and run the file by typing either "python3 tic_tac_toe.py" into the console or simply "python tic_tac_toe.py" and press enter.
 
